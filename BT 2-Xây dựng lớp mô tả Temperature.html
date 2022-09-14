@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="Temperature.js"></script>
+</head>
+<body>
+<script>
+    let  rec1 = new Temperature(+prompt('Nhập nhiệt độ muốn đổi'));
+   let doF= rec1. getCelsius();
+   let doKen=rec1.getToKenvin();
+   document.write("Độ C sau khi chuyển sang độ F là: "+doF+"<br>")
+    document.write("Độ C sau khi chuyển sang độ Kenvin là: "+doKen)
+</script>
+</body>
+</html>
