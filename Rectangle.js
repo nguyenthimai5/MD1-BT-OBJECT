@@ -7,7 +7,7 @@ class Rectangle{
         this.height = height;
     }
     setWight(width){
-        this.wight=width
+        this.width=width
     }
     getWidth(){
         return this.width;
@@ -23,5 +23,13 @@ class Rectangle{
     }
     getPerimeter() {
         return (this.width + this.height) * 2;
+    }
+    drawRectangle(ctx){
+        ctx.beginPath()
+        ctx.fillStyle='pink'
+        ctx.strokeRect(100,100,this.width,this.height)
+        ctx.fill()
+        ctx.closePath()
+        ctx.fillRect(100,100,this.width,this.height)
     }
 }

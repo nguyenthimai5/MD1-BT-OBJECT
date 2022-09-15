@@ -7,11 +7,17 @@
 </head>
 <body>
 <script>
-    let  rec1 = new Temperature(+prompt('Nhập nhiệt độ muốn đổi'));
-   let doF= rec1. getCelsius();
-   let doKen=rec1.getToKenvin();
-   document.write("Độ C sau khi chuyển sang độ F là: "+doF+"<br>")
-    document.write("Độ C sau khi chuyển sang độ Kenvin là: "+doKen)
+    let nhietDo=+prompt('Nhập nhiệt độ muốn đổi')
+    let  rec1 = new Temperature(nhietDo);
+    let doF= rec1. getCelsius();
+    let doKen=rec1.getToKenvin();
+  if (nhietDo<-273){
+      document.write('nhiệt đô đã xuống quá thấp min= '+`${nhietDo}`)
+  }else {
+      document.write("Độ C sau khi chuyển sang độ F là: "+doF+"<br>")
+      document.write("Độ C sau khi chuyển sang độ Kenvin là: "+doKen)
+  }
+
 </script>
 </body>
 </html>

@@ -6,10 +6,13 @@
     <script src="Rectangle.js"></script>
 </head>
 <body>
+<canvas id="myCanva" width="700px" height="400px"></canvas>
 <script>
-let rectangle1= new Rectangle(+prompt('nhập chiều rộng'),+prompt('nhập chiều dài'));
-let dienTich=  rectangle1.getArea();
-let banKinh=rectangle1.getPerimeter();
+    let ctx=document.getElementById('myCanva').getContext('2d')
+let rectangle2= new Rectangle((+prompt('nhập chiều rộng')),+prompt('nhập chiều dài'));
+    rectangle2.drawRectangle(ctx);
+let dienTich=  rectangle2.getArea();
+let banKinh=rectangle2.getPerimeter();
 document.write("diện tích hình chữ nhật là: "+dienTich+"<br>")
 document.write("Chu vi hình chữ nhật là: "+banKinh )
 </script>
